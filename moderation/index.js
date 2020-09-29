@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 const app = express()
 app.use(bodyParser.json())
 
-app.post("events", async (req, res) => {
+app.post("/events", async (req, res) => {
   const { type, data } = req.body
 
   if (type === "CommentCreated") {
